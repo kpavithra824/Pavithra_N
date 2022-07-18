@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-xl-9">
+        <div class="card border-0">
+            <div class="card-body">
+                <h2>Search Flight</h2>
+               <div>
+                      <label class="form-label">From Place</label>
+                      <input  [(ngModel)]="SearchModel.fromplace" class="form-control" type="text" />   
+                  </div>
+                  <div>
+                      <label class="form-label">ToPlace</label>
+                      <input class="form-control" type="text" />                        
+                  </div>
+               <div class="py-4">
+                      <input type="submit"  class="btn btn-primary" value="search Flights" (click)="GetFlightDetails()"  />
+                  </div>                           
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <table class="table caption-top"  >
+    <caption>List of Customers</caption>
+    <thead >
+        <td >AirlineName</td>
+        <td >FlightNumber</td>
+        <td>StartDate</td>
+        <td >FromPlace</td>
+        <td >ToPlace</td>
+    </thead>
+    <tr *ngFor="let cust of SearchModels">
+        <td>{{cust.airlineName}}</td>
+        <td>{{cust.flightNumber}}</td>
+        <td>{{cust.startDateTime}}</td>
+        <td>{{cust.fromplace}}</td>
+        <td>{{cust.toPlace}}</td>
+       
+    </tr>
+  </table>
+  
+
+  

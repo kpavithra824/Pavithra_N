@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-xl-9">
+        <div class="card border-0">
+            <div class="card-body">
+                <h2>Booking</h2>                                     
+                  <div>
+                      <label class="form-label">Customer Name</label>
+                      <input  [(ngModel)]="BookingModel.customerName" class="form-control" type="text" />  
+                     
+                  </div>
+                  <div>
+                      <label class="form-label">EmaildId</label>
+                      <input [(ngModel)]="BookingModel.emailId" class="form-control" type="text" /> 
+                                       
+                  </div>
+                  <div>
+                      <label class="form-label">SeatstoBook</label>
+                      <input [(ngModel)]="BookingModel.seatsToBook" class="form-control" type="text" />
+                     
+                  </div>
+                  <div>
+                    <label class="form-label">FlightId</label>
+                    <input [(ngModel)]="BookingModel.flightId" class="form-control" type="text" />
+                    
+                </div>
+                <div>
+                    <label class="form-label">BookedOn</label>
+                    <input [(ngModel)]="BookingModel.bookedOn" class="form-control" type="text" />
+                    
+                </div>
+                
+                  <div class="py-4">
+                      <input type="submit"  class="btn btn-primary" value="BookTicket" (click)="AddBooking()" />
+                  </div>                  
+            </div>
+        </div>
+    </div>
+  </div>
+  <table class="table caption-top"  >
+    <caption>List of Booking</caption>
+    <thead >
+        <td >Customer Name</td>
+        <td >Emaild</td>
+        <td >SeatstoBook</td>
+        <td >FlightId</td>
+       <td>BookedOn</td>
+    </thead>
+    <tr *ngFor="let cust of BookingModels">
+        <td>{{cust.customerName}}</td>
+        <td>{{cust.emailId}}</td>
+        <td>{{cust.seatsToBook}}</td>
+        <td>{{cust.flightId}}</td>
+        <td>{{cust.bookedOn}}</td> 
+    </tr>
+  </table>
+
+
+ 
